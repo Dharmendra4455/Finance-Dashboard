@@ -1,0 +1,5 @@
+.recharts-wrapper,
+.recharts-surface {
+  outline: none !important;
+  box-shadow: none !important;
+}

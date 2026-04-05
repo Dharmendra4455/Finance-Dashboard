@@ -1,0 +1,169 @@
+{
+  "user": {
+    "name": "Dharmendra",
+    "role": "viewer"
+  },
+
+  "summary": {
+    "totalBalance": 12450.75,
+    "monthlyIncome": 5200,
+    "monthlyExpenses": 3150.5
+  },
+
+
+  "transactions": [
+    {
+      "id": "txn1",
+      "date": "2024-02-15",
+      "description": "Salary",
+      "category": "Income",
+      "amount": 2500,
+      "type": "income"
+    },
+    {
+      "id": "txn2",
+      "date": "2024-02-14",
+      "description": "Grocery Shopping",
+      "category": "Food",
+      "amount": 120.75,
+      "type": "expense"
+    },
+    {
+      "id": "txn3",
+      "date": "2024-02-12",
+      "description": "Uber Ride",
+      "category": "Transport",
+      "amount": 25.5,
+      "type": "expense"
+    },
+    {
+      "id": "txn4",
+      "date": "2024-02-10",
+      "description": "Online Purchase",
+      "category": "Shopping",
+      "amount": 80,
+      "type": "expense"
+    },
+    {
+      "id": "txn5",
+      "date": "2024-02-08",
+      "description": "Electricity Bill",
+      "category": "Bills",
+      "amount": 150,
+      "type": "expense"
+    },
+    {
+      "id": "txn6",
+      "date": "2024-02-05",
+      "description": "Freelance Work",
+      "category": "Income",
+      "amount": 700,
+      "type": "income"
+    },
+    {
+      "id": "txn7",
+      "date": "2024-03-23",
+      "description": "Online Purchase",
+      "category": "Shopping",
+      "amount": 870,
+      "type": "expense"
+    },
+
+     {
+      "id": "txn8",
+      "date": "2024-03-15",
+      "description": "Salary",
+      "category": "Income",
+      "amount": 4500,
+      "type": "income"
+    },
+    {
+      "id": "txn9",
+      "date": "2024-04-14",
+      "description": "Grocery Shopping",
+      "category": "Food",
+      "amount": 1020.75,
+      "type": "expense"
+    },
+    {
+      "id": "txn10",
+      "date": "2024-04-12",
+      "description": "Uber Ride",
+      "category": "Transport",
+      "amount": 325.5,
+      "type": "expense"
+    },
+    {
+      "id": "txn11",
+      "date": "2024-04-10",
+      "description": "Online Purchase",
+      "category": "Shopping",
+      "amount": 800,
+      "type": "expense"
+    },
+    {
+      "id": "txn12",
+      "date": "2024-05-08",
+      "description": "Electricity Bill",
+      "category": "Bills",
+      "amount": 550,
+      "type": "expense"
+    },
+    {
+      "id": "txn13",
+      "date": "2024-05-05",
+      "description": "Freelance Work",
+      "category": "Income",
+      "amount": 2200,
+      "type": "income"
+    },
+    {
+      "id": "txn14",
+      "date": "2024-05-23",
+      "description": "Online Purchase",
+      "category": "Shopping",
+      "amount": 70,
+      "type": "expense"
+    },
+     {
+      "id": "txn15",
+      "date": "2024-06-14",
+      "description": "Grocery Shopping",
+      "category": "Food",
+      "amount": 120.75,
+      "type": "expense"
+    },
+    {
+      "id": "txn16",
+      "date": "2024-06-12",
+      "description": "Uber Ride",
+      "category": "Transport",
+      "amount": 225.5,
+      "type": "expense"
+    },
+      {
+      "id": "txn17",
+      "date": "2024-06-05",
+      "description": "Freelance Work",
+      "category": "Income",
+      "amount": 1900,
+      "type": "income"
+    },
+    {
+      "id": "txn18",
+      "date": "2024-06-10",
+      "description": "Online Purchase",
+      "category": "Shopping",
+      "amount": 180,
+      "type": "expense"
+    },
+    {
+    "id": "txn19",
+      "date": "2024-06-15",
+      "description": "Salary",
+      "category": "Income",
+      "amount": 2500,
+      "type": "income"
+    }
+  ]
+}
