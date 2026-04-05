@@ -12,7 +12,7 @@ const Transaction = () => {
   const [Filterdata, setfilterdata] = useState(data?.transactions)
   const [showForm, setshowform] = useState(false)
   const [showwarning, setshowwarning] = useState(false)
-  const deleditdata = useRef({
+  const Addeditdata = useRef({
     mode: '',
     dataid: ''
   })
@@ -53,7 +53,7 @@ const Transaction = () => {
   const deletehandler = () => {
     setdata((prev) => ({
       ...prev,
-      transactions: data?.transactions?.filter((item) => item?.id !== deleditdata.current?.dataid)   //set all data to transaction array except selected one
+      transactions: data?.transactions?.filter((item) => item?.id !==Addeditdata.current?.dataid)   //set all data to transaction array except selected one
     }))
     toast.success('Transaction deleted Successfully')
     setshowwarning(false)
@@ -122,8 +122,11 @@ const Transaction = () => {
            
            {/* Add Transaction Button */}
             <button
-              className={`bg-sky-600 text-zinc-50 px-2 md:px-4 py-1 rounded shrink-0 ${data?.user?.role == 'admin' ? 'hidden' : 'block'}`}
-              onClick={() => setshowform(true)}
+              className={`bg-sky-600 text-zinc-50 px-2 md:px-4 py-1 rounded shrink-0 ${data?.user?.role == 'admin' ?'block' :'hidden'}`}
+              onClick={() => {
+                Addeditdata.current.mode='add'
+                setshowform(true)
+              }}
             >Add Transaction
             </button>
 
@@ -159,7 +162,7 @@ const Transaction = () => {
                         <td className='p-2 flex gap-2'>
                           <svg
                             onClick={() => {
-                              deleditdata.current = {
+                              Addeditdata.current = {
                                 mode: 'edit',
                                 dataid: item?.id
                               }
@@ -170,7 +173,7 @@ const Transaction = () => {
 
                           <svg
                             onClick={() => {
-                            deleditdata.current = { dataid: item?.id }
+                            Addeditdata.current = { dataid: item?.id }
                             setshowwarning(true)
                             }}
                             xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-red-500 hover:scale-110 hover:cursor-pointer lucide lucide-trash2-icon lucide-trash-2"><path d="M10 11v6" /><path d="M14 11v6" /><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" /><path d="M3 6h18" /><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" /></svg>
@@ -191,8 +194,8 @@ const Transaction = () => {
       {
         showForm && (
           <Add_Edit_Transaction
-            transactionId={deleditdata.current.mode == 'edit' ||
-              deleditdata.current.mode == 'delete' ? deleditdata.current.dataid
+            transactiondata={Addeditdata.current.mode == 'edit'
+               ? Addeditdata.current
               : null}
             setclose={() => setshowform(false)}
           />

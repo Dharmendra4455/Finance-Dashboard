@@ -20,7 +20,7 @@ const Navbar = () => {
                                 ...prev,
                                 user: { ...prev.user, role: e.target.value }
                             }))}
-                            className="outline-0 px-8 py-0.5 border rounded text-zinc-500 font-bold">
+                            className="outline-0 px-5 py-0.5 border rounded text-zinc-500 font-bold">
                             <option className="font-semibold" value="viewer ">Viewer</option>
                             <option className="font-semibold" value="admin">Admin</option>
                         </select>

@@ -14,12 +14,12 @@ const Add_Edit_Transaction = (props) => {
     type:'',
     description:'',
     amount:'0'
-
    })
+   
    useEffect(()=>{
    
-    if(props.transactionId){
-      const editdata =data?.transactions?.filter((item)=>item?.id==props.transactionId)
+    if(props?.transactiondata?.dataid){
+      const editdata =data?.transactions?.filter((item)=>item?.id==props.transactiondata.dataid)
       // console.log(props.transactionId ,editdata)
       setformdata(editdata[0])
     }
@@ -65,7 +65,7 @@ const Submithandler=()=>{
       <div className=" w-80  bg-zinc-50 p-2">
        <nav className='flex justify-between px-4'>
         <h1></h1>
-        <h1 className='text-xl font-bold text-zinc-700'>{props.transactionId ?'Edit Transaction': 'Add Transaction' }</h1>
+        <h1 className='text-xl font-bold text-zinc-700'>{props?.transactiondata?.mode=='edit' ?'Edit Transaction': 'Add Transaction' }</h1>
         <div 
         onClick={()=>props.setclose()}
         className="cross hover:cursor-pointer hover:bg-zinc-400 text-red-600 bg-zinc-300 w-7 rounded-full text-center">✘</div>
