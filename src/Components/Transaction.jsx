@@ -204,8 +204,8 @@ const Transaction = () => {
 
       {
         showwarning && (
-          <main className="top-0 left-0 flex w-full h-full fixed justify-center items-center bg-zinc-800/80">
-            <div className="body bg-white w-fit p-2 rounded-lg h-20">
+          <main className="top-0 left-0 flex w-full h-full fixed justify-center items-center px-2 bg-zinc-800/80">
+            <div className="body bg-white w-fit p-2 rounded-lg">
               <h3 className="text-lg font-semibold text-zinc-700">Are you sure you want to delete this transaction?</h3>
               <div className="buttonWrapper float-end flex gap-2 mt-2 mr-4">
                 <button
