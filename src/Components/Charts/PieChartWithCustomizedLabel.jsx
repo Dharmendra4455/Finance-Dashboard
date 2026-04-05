@@ -17,7 +17,7 @@ const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, per
 
   return (
 
-    <text x={x} y={y} fill="white" textAnchor={x > ncx ? 'start' : 'end'} dominantBaseline="central"  className='text-xl sm:text-[10px] md:text-[14px]' >
+    <text x={x} y={y} fill="white" textAnchor={x > ncx ? 'start' : 'end'} dominantBaseline="central"  className='text-[12px] font-semibold sm:text-[10px] md:text-[13px]' >
       {`${((percent ?? 1) * 100).toFixed(0)}%`} 
     </text>
   );

@@ -61,7 +61,7 @@ const Transaction = () => {
   }
   return (
     <>
-      <main className={`${showForm || showwarning ? "fixed" : "static"} body mt-2 bg-zinc-50  rounded p-2   w-full overflow-x-hidden `}>
+      <main className={`${showForm || showwarning ? "fixed" : "static"} body mt-2 bg-zinc-50  rounded p-2 h-full w-full overflow-x-hidden `}>
 
         {/* Search_Filter_Section */}
         <h1 className='font-bold text-xl text-zinc-500 my-2'>Recent Transaction</h1>
@@ -126,6 +126,7 @@ const Transaction = () => {
               onClick={() => {
                 Addeditdata.current.mode='add'
                 setshowform(true)
+                document.body.style.position='fixed'
               }}
             >Add Transaction
             </button>
@@ -167,6 +168,7 @@ const Transaction = () => {
                                 dataid: item?.id
                               }
                               setshowform(true)
+                              document.body.style.position='fixed'
 
                             }}
                             xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-zinc-950 font-bold hover:scale-110 lucide  hover:cursor-pointer lucide-pencil-icon lucide-pencil"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" /><path d="m15 5 4 4" /></svg>
@@ -175,6 +177,7 @@ const Transaction = () => {
                             onClick={() => {
                             Addeditdata.current = { dataid: item?.id }
                             setshowwarning(true)
+                            document.body.style.position='fixed'  //make baground dashboard fixed when modal open
                             }}
                             xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-red-500 hover:scale-110 hover:cursor-pointer lucide lucide-trash2-icon lucide-trash-2"><path d="M10 11v6" /><path d="M14 11v6" /><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" /><path d="M3 6h18" /><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" /></svg>
                         </td>}
@@ -197,7 +200,11 @@ const Transaction = () => {
             transactiondata={Addeditdata.current.mode == 'edit'
                ? Addeditdata.current
               : null}
-            setclose={() => setshowform(false)}
+            setclose={() => {
+              setshowform(false)
+            document.body.style.position='static'   //release from fixied position
+            }}
+            
           />
         )
       }
@@ -219,6 +226,7 @@ const Transaction = () => {
                   className="rounded hover:cursor-pointer px-4 bg-zinc-200"
                   onClick={() => {
                     setshowwarning(false)
+                    document.body.style.position='static'
                   }}
                 >
                   No
