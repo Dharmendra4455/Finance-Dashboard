@@ -69,7 +69,6 @@ const categorydataarray =Object.keys(categorydata).map((key)=>({
         ))}
         </Pie>
     <Legend
-    
     layout="vertical"     // 👈 stack items vertically
     align="right"         // 👈 move to right side
     verticalAlign="middle" // 👈 center vertically

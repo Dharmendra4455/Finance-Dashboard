@@ -8,7 +8,7 @@ const Add_Edit_Transaction = (props) => {
   const {data,setdata} =useContext(dataapi)
   const[editdata ,seteditdata] =useState({})
   const[formdata ,setformdata] =useState({
-    id:props.transactionId? props.transactionId: `txn${data.transactions.length+1}`,
+    id:props.transactiondata?.dataid? props.transactiondata?.dataid: `txn${data.transactions.length+1}`,
     date:`${new Date().toLocaleDateString('en-CA')} `,
     category:'',
     type:'',
