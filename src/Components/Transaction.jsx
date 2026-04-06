@@ -61,7 +61,7 @@ const Transaction = () => {
   }
   return (
     <>
-      <main className={`${showForm || showwarning ? "fixed" : "static"} body mt-2 bg-zinc-50  rounded p-2 h-full w-full overflow-x-hidden `}>
+      <main className={`${showForm || showwarning ? "fixed" : "static"} body mt-2 bg-zinc-50  rounded p-2  w-full overflow-x-hidden `}>
 
         {/* Search_Filter_Section */}
         <h1 className='font-bold text-xl text-zinc-500 my-2'>Recent Transaction</h1>
