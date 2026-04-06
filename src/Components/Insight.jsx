@@ -80,17 +80,17 @@ const highExpense = currentMonthExpense.reduce((acc,item)=> {
     {/* Monthly Comarision */}
     <div className="wrapper border-b-2 py-2 border-zinc-300">
     <h2>Monthly Comparision: </h2>
-  {  current_month_expenses.balance > prevmonth_expenses?
-     <h4 className='text-sm'>{`${months[current_month_expenses.month-1]} expanses  are ${(((current_month_expenses.balance - prevmonth_expenses.balance)/current_month_expenses.balance)*100).toFixed(2)}% higher than ${months[prevmonth_expenses.month-1]}`}</h4>
+  {  current_month_expenses?.balance > prevmonth_expenses?
+     <h4 className='text-sm'>{`${months[current_month_expenses?.month-1]} expanses  are ${(((current_month_expenses?.balance - prevmonth_expenses?.balance)/current_month_expenses?.balance)*100).toFixed(2)}% higher than ${months[prevmonth_expenses?.month-1]}`}</h4>
      :
-     <h4 className='text-sm'>{`${months[current_month_expenses.month-1]} expanses  are ${(((prevmonth_expenses.balance-current_month_expenses.balance)/current_month_expenses.balance)*100).toFixed(2)}% lower than ${months[prevmonth_expenses.month-1]}`}</h4>
+     <h4 className='text-sm'>{`${months[current_month_expenses?.month-1]} expanses  are ${(((prevmonth_expenses?.balance-current_month_expenses?.balance)/current_month_expenses?.balance)*100).toFixed(2)}% lower than ${months[prevmonth_expenses?.month-1]}`}</h4>
   
   }
     </div>
     {/* Tip */}
     <div className="wrapper border-b-2 py-2 border-zinc-300">
     <h2>Tip : </h2>
-    {totalspendings < spenddataarray[0].amount 
+    {totalspendings < spenddataarray[0]?.amount 
        ?
       <h4 className='text-sm'>Your income <span className='font-semibold'>is highest than your expenses. <span style={{color:'green'}}>Great job!</span> </span></h4>
       :

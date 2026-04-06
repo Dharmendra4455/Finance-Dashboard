@@ -12,19 +12,19 @@ const{data ,setdata} =useContext(dataapi)
           <div
               className='px-12 sm:px-6 md:px-12 lg:px-22 py-5  shrink-0 rounded-md text-xl text-zinc-50' style={{ backgroundColor: 'blue' }}>
               <div className="text">Total Balance</div>
-              <div className="Value font-bold">{`$ ${data?.summary?.totalBalance}`}</div>
+              <div className="Value font-bold">{`$ ${data?.summary?.totalBalance||0}`}</div>
           </div>
 
           <div
               className='px-12 sm:px-6 md:px-12 lg:px-22 py-5  shrink-0 rounded-md text-xl text-zinc-50' style={{ backgroundColor: 'green' }}>
               <div className="text">Monthly Income</div>
-              <div className="Value font-bold">{`$ ${data?.summary?.monthlyIncome}`}</div>
+              <div className="Value font-bold">{`$ ${data?.summary?.monthlyIncome||0}`}</div>
           </div>
 
           <div
               className='px-12 sm:px-6 md:px-12 lg:px-22 py-5  shrink-0 rounded-md text-xl text-zinc-50' style={{ backgroundColor: 'red' }}>
               <div className="text">Monthly Expenses</div>
-              <div className="Value font-bold">{`$ ${data?.summary?.monthlyExpenses}`}</div>
+              <div className="Value font-bold">{`$ ${data?.summary?.monthlyExpenses||0}`}</div>
           </div>
 
 
