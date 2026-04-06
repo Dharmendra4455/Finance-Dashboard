@@ -13,7 +13,7 @@ const Add_Edit_Transaction = (props) => {
     category:'',
     type:'',
     description:'',
-    amount:'0'
+    amount:''
    })
    
    useEffect(()=>{
@@ -37,7 +37,7 @@ const Submithandler=()=>{
   if(!formdata.amount) return toast.error("Enter amount!")
   if(!formdata.description) return toast.error("Enter description!")
   
-    if(props.transactionId){  //edit mode (admin)
+    if(props.transactiondata?.dataid){  //edit mode (admin)
      setdata((prev)=>({
       ...prev,
      transactions: prev.transactions.map((item) =>
