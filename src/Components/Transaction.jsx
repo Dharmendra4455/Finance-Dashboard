@@ -217,7 +217,11 @@ const Transaction = () => {
               <div className="buttonWrapper float-end flex gap-2 mt-2 mr-4">
                 <button
                   className="rounded hover:cursor-pointer px-4 text-zinc-50 bg-red-600"
-                  onClick={() => deletehandler()}
+                  onClick={() =>{
+                     deletehandler()
+                     document.body.style.position='static'
+
+                  }}
                 >
                   Yes
                 </button>
